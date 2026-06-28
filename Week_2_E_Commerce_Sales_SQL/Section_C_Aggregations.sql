@@ -1,4 +1,4 @@
-use E_Commerce_Sales;
+USE E_Commerce_Sales;
 /* 
 ============================================================
    SECTION C – Aggregation (GROUP BY, SUM, COUNT, AVG, MIN, MAX)
