@@ -66,8 +66,8 @@ Week_2_E_Commerce_Sales_SQL/
 │
 ├── Database_Setup.sql
 ├── Section_A_SQL_Basics.sql
-├── Section_B_Filtering_and_Optimization.sql
-├── Section_C_Aggregation.sql
+├── Section_B_Filtering_and_Sorting.sql
+├── Section_C_Aggregations.sql
 ├── Section_D_Joins_and_Relationships.sql
 ├── Section_E_Advanced_Concepts.sql
 └── README.md
@@ -77,8 +77,8 @@ Week_2_E_Commerce_Sales_SQL/
 
 * **Database_Setup.sql** – Creates the database, tables, indexes, and inserts sample data.
 * **Section_A_SQL_Basics.sql** – Solutions for SQL Basics.
-* **Section_B_Filtering_and_Optimization.sql** – Queries related to filtering and optimization.
-* **Section_C_Aggregation.sql** – Aggregate functions and grouping queries.
+* **Section_B_Filtering_and_Sorting.sql** – Queries related to filtering and optimization.
+* **Section_C_Aggregations.sql** – Aggregate functions and grouping queries.
 * **Section_D_Joins_and_Relationships.sql** – Join operations and relationship-based queries.
 * **Section_E_Advanced_Concepts.sql** – CASE statements, ACID properties, and transactions.
 
@@ -92,4 +92,3 @@ Working on this assignment helped me improve my understanding of SQL and relatio
 * MySQL Workbench
 * Git
 * GitHub
-
