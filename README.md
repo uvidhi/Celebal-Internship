@@ -15,7 +15,7 @@ Sample data insertion
 SQL solutions for:
 Section A – SQL Basics
 Section_B - Filtering and Sorting
-Section C – Aggregation
+Section C – Aggregations
 Section D – Joins & Relationships
 Section E – Advanced Concepts
 Tools & Technologies
