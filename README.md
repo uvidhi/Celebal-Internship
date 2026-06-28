@@ -14,7 +14,7 @@ Database creation scripts
 Sample data insertion
 SQL solutions for:
 Section A – SQL Basics
-Section B – Filtering & Optimization
+Section_B - Filtering and Sorting
 Section C – Aggregation
 Section D – Joins & Relationships
 Section E – Advanced Concepts
