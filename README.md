@@ -1,10 +1,12 @@
- # Data Engineering Internship
+# Data Engineering Internship
 
 ## Overview
 
 This repository contains the weekly assignments, practical implementations, and projects completed during my **Data Engineering Internship at Celebal Technologies**.
 
 Each week's work focuses on developing practical skills in **data analysis, SQL, ETL, cloud-based data engineering, and distributed data processing** through hands-on assignments and projects.
+
+---
 
 ## Repository Structure
 
@@ -74,6 +76,24 @@ Each week's work focuses on developing practical skills in **data analysis, SQL,
 * Wide transformations and shuffle operations
 * Complete PySpark data processing pipeline
 
+### Week 6 – Apache Spark Architecture & PySpark Operations
+
+* Spark Architecture (Driver, Cluster Manager, Executor)
+* Lazy Evaluation and DAG Execution
+* Lineage Graph and Fault Tolerance
+* Client Mode vs Cluster Mode
+* CSV and Parquet file handling
+* Predicate Pushdown optimization
+* DataFrame transformations and actions
+* Reading and writing CSV/Parquet files
+* Column selection, filtering, and renaming
+* Data type casting
+* Creating derived columns
+* Performance comparison of `.show()` and `.collect()`
+* Practical PySpark queries and implementations
+
+---
+
 ## Tools & Technologies
 
 * Python
@@ -93,6 +113,8 @@ Each week's work focuses on developing practical skills in **data analysis, SQL,
 * Git
 * GitHub
 
+---
+
 ## Skills Gained
 
 * Data Import and Database Management
@@ -104,6 +126,11 @@ Each week's work focuses on developing practical skills in **data analysis, SQL,
 * Cloud-Based Data Engineering
 * Azure Data Services
 * PySpark DataFrame Operations
+* Spark Architecture
+* Lazy Evaluation and DAG Execution
+* Fault Tolerance in Apache Spark
+* CSV and Parquet Processing
+* Predicate Pushdown Optimization
 * Subqueries
 * Common Table Expressions (CTEs)
 * Window Functions
@@ -113,6 +140,11 @@ Each week's work focuses on developing practical skills in **data analysis, SQL,
 * Distributed Data Processing
 * Version Control using Git and GitHub
 
+---
+
 ## Internship Progress
 
-This repository is being updated regularly as I progress through my Data Engineering Internship.
+This repository is being updated regularly as I progress through my **Data Engineering Internship at Celebal Technologies**, documenting my learning journey in SQL, Azure, Apache Spark, PySpark, ETL pipelines, cloud technologies, and distributed data engineering through weekly assignments and practical projects.
+
+---
+⭐ Feel free to explore the repository and follow my progress throughout the internship!
