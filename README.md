@@ -92,6 +92,19 @@ Each week's work focuses on developing practical skills in **data analysis, SQL,
 * Performance comparison of `.show()` and `.collect()`
 * Practical PySpark queries and implementations
 
+### Week 7 – Delta Lake Incremental Data Processing
+
+* Loading the Superstore dataset into a Delta table
+* Column renaming and schema standardization
+* Missing value analysis
+* Duplicate record removal
+* Delta table creation
+* Incremental dataset creation
+* Delta Lake MERGE operation (Update and Insert)
+* Row count and duplicate validation
+* Final Delta table verification
+* Assignment documentation and screenshots
+
 ---
 
 ## Tools & Technologies
@@ -102,6 +115,8 @@ Each week's work focuses on developing practical skills in **data analysis, SQL,
 * MySQL Shell / Terminal
 * PySpark
 * Apache Spark
+* Delta Lake
+* Databricks
 * Microsoft Azure
 * Azure Blob Storage
 * Azure Data Factory
@@ -131,6 +146,11 @@ Each week's work focuses on developing practical skills in **data analysis, SQL,
 * Fault Tolerance in Apache Spark
 * CSV and Parquet Processing
 * Predicate Pushdown Optimization
+* Delta Lake Fundamentals
+* Incremental Data Processing
+* Delta Lake MERGE Operations
+* ACID Transactions in Delta Lake
+* Data Validation
 * Subqueries
 * Common Table Expressions (CTEs)
 * Window Functions
@@ -144,7 +164,8 @@ Each week's work focuses on developing practical skills in **data analysis, SQL,
 
 ## Internship Progress
 
-This repository is being updated regularly as I progress through my **Data Engineering Internship at Celebal Technologies**, documenting my learning journey in SQL, Azure, Apache Spark, PySpark, ETL pipelines, cloud technologies, and distributed data engineering through weekly assignments and practical projects.
+This repository is being updated regularly as I progress through my **Data Engineering Internship at Celebal Technologies**, documenting my learning journey in SQL, Azure, Apache Spark, PySpark, Delta Lake, ETL pipelines, cloud technologies, and distributed data engineering through weekly assignments and practical projects.
 
 ---
+
 ⭐ Feel free to explore the repository and follow my progress throughout the internship!
