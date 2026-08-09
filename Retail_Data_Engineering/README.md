@@ -501,6 +501,10 @@ The project takes raw CRM and ERP data and processes it through the Bronze, Silv
 The final Gold layer provides clean, structured, and business-ready data that can be used for SQL analytics and reporting.
 
 ---
+## Known Limitations
+
+- Dimension tables currently use natural keys rather than generated surrogate keys.
+- No Slowly Changing Dimension (SCD) tracking is implemented yet.
 
 # Conclusion
 
