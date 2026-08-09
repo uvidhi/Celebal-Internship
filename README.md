@@ -105,6 +105,20 @@ Each week's work focuses on developing practical skills in **data analysis, SQL,
 * Final Delta table verification
 * Assignment documentation and screenshots
 
+### Week 8 – E-Commerce Order Analytics System
+
+* Synthetic e-commerce dataset generation (customers, products, orders, order items) using Python and Faker
+* Intentional data quality issues introduced (missing IDs, duplicates, invalid emails, negative quantities) to simulate real-world data
+* Data cleaning and validation using Pandas
+* SQL table creation and data loading in Databricks
+* SQL analytics: revenue, top products, top customers, average order value, category performance
+* Window functions and CTEs for rankings, running totals, and month-over-month growth
+* Cohort and retention analysis (first purchase month, repeat vs one-time customers)
+* Customer segmentation using purchase frequency, spending level, and RFM-style metrics
+* Python CLI reporting tool using `tabulate`
+* Edge case testing (invalid input, empty results, missing tables, future dates, negative quantities)
+* Exported chart outputs for all major reports
+
 ---
 
 ## Tools & Technologies
@@ -125,6 +139,8 @@ Each week's work focuses on developing practical skills in **data analysis, SQL,
 * Pandas
 * NumPy
 * Matplotlib
+* Faker
+* Tabulate
 * Git
 * GitHub
 
@@ -158,6 +174,11 @@ Each week's work focuses on developing practical skills in **data analysis, SQL,
 * Data Aggregation
 * Business Data Analysis
 * Distributed Data Processing
+* Synthetic Data Generation
+* Cohort and Retention Analysis
+* Customer Segmentation (RFM)
+* CLI-Based Reporting Tools
+* Edge Case and Error Handling
 * Version Control using Git and GitHub
 
 ---
