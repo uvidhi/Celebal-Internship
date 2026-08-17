@@ -76,7 +76,8 @@ Retail-Medallion-Project/
 │   ├── 07_Silver_ERP_px_cat
 │   ├── 08_Gold_StarSchema
 │   ├── 09_Business_SQL
-│   └── 10_Data_Validation
+│   ├── 10_Data_Validation
+│   └── 11_SCD_Historization
 │
 ├── sql/
 │   └── SQL queries
@@ -210,6 +211,7 @@ The main Gold tables are:
 - fact_sales
 - dim_customer
 - dim_product
+- dim_date
 
 ---
 
@@ -222,6 +224,8 @@ fact_sales
     |---- dim_customer
     |
     |---- dim_product
+    |
+    |---- dim_date
 
 ---
 
@@ -232,8 +236,9 @@ The fact_sales table contains transaction-level sales information.
 Main columns:
 
 - order_id
-- product_key
-- customer_id
+- product_sk
+- customer_sk
+- order_date_sk
 - order_date
 - quantity
 - unit_price
@@ -249,6 +254,7 @@ The dim_product table contains product-related descriptive information.
 
 Main columns:
 
+- product_sk
 - product_id
 - product_key
 - product_name
@@ -261,7 +267,45 @@ Main columns:
 
 The dim_customer table contains customer-related descriptive information.
 
-It is connected to the sales fact table using customer_id.
+It uses a generated surrogate key (customer_sk) and is connected to the sales fact table using customer_sk.
+
+---
+
+## Date Dimension
+
+The dim_date table contains date-related attributes used for analytical reporting.
+
+It uses a generated surrogate key (date_sk) and is connected to the sales fact table using order_date_sk.
+
+---
+
+# SCD Type 2 Historization
+
+SCD Type 2 historization was implemented for the customer and product dimensions.
+
+The dimensions use:
+
+- Surrogate keys
+- Row hash
+- Effective date
+- End date
+- Current-record indicator
+
+A row hash is used to detect changes in dimension attributes.
+
+When a change is detected in an existing current record:
+
+- The existing record is closed by setting the end date.
+- The existing record is marked as not current.
+- A new version of the record is inserted.
+- The new version receives a new surrogate key.
+- The new version is marked as current.
+
+This allows historical versions of customer and product records to be maintained.
+
+Notebook:
+
+11_SCD_Historization
 
 ---
 
@@ -323,6 +367,15 @@ The main relationships checked were:
 
 - fact_sales → dim_customer
 - fact_sales → dim_product
+- fact_sales → dim_date
+
+Additional validation was performed for:
+
+- Duplicate surrogate keys
+- Orphan customer keys
+- Orphan product keys
+- Orphan date keys
+- Current dimension records
 
 ---
 
@@ -442,6 +495,8 @@ The notebooks are executed in the following order:
 09_Business_SQL
    |
 10_Data_Validation
+   |
+11_SCD_Historization
 
 ---
 
@@ -463,6 +518,8 @@ Through this project, I practiced and understood:
 - Invalid data handling
 - Fact and dimension tables
 - Star Schema
+- Surrogate keys
+- SCD Type 2 historization
 - Data warehouse concepts
 - SQL joins
 - SQL aggregations
@@ -487,8 +544,9 @@ PySpark is useful for schema inspection and data processing, while SQL is very c
 6. Run 08_Gold_StarSchema.
 7. Run 09_Business_SQL.
 8. Run 10_Data_Validation.
-9. Review the final tables and outputs.
-10. Check the screenshots folder for important validation and business outputs.
+9. Run 11_SCD_Historization.
+10. Review the final tables and outputs.
+11. Check the screenshots folder for important validation and business outputs.
 
 ---
 
@@ -501,10 +559,15 @@ The project takes raw CRM and ERP data and processes it through the Bronze, Silv
 The final Gold layer provides clean, structured, and business-ready data that can be used for SQL analytics and reporting.
 
 ---
+
 ## Known Limitations
 
-- Dimension tables currently use natural keys rather than generated surrogate keys.
-- No Slowly Changing Dimension (SCD) tracking is implemented yet.
+The previously identified limitations related to surrogate keys and SCD historization have been addressed.
+
+- Surrogate keys have been implemented for the Gold dimension tables.
+- SCD Type 2 historization has been implemented for customer and product dimensions.
+
+No major limitations were identified within the current project scope.
 
 # Conclusion
 
@@ -514,7 +577,9 @@ Raw CRM and ERP data is first stored in the Bronze layer. The data is then clean
 
 The Gold layer can then be used for business analysis using SQL.
 
-This project helped me understand the complete flow of a data engineering pipeline, from raw data ingestion to data cleaning, transformation, validation, dimensional modeling, and business analytics.
+SCD Type 2 historization was implemented to maintain historical versions of customer and product dimension records.
+
+This project helped me understand the complete flow of a data engineering pipeline, from raw data ingestion to data cleaning, transformation, validation, dimensional modeling, historization, and business analytics.
 
 ---
 
